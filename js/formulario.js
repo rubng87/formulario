@@ -32,8 +32,9 @@ function obtenerFecha () {
  nacimiento = nacimiento.split("-") // ["2006", "3", "4"]
 
     let hoy = new Date()
-    //getDay() de 0 al 6
-    let hoyDia = hoy.getDate()
+
+    //getDay() dia de la semana 0 al 6
+    let hoyDia = hoy.getDate() //dia del mes (1/31)
     let hoyMes = hoy.getMonth()+1
     let hoyAny = hoy.getFullYear()
     console.log(hoyAny);
