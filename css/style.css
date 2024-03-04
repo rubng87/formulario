@@ -1,0 +1,19 @@
+label {
+    display: block;
+}
+
+/* textarea {
+    field-sizing : content;
+} */
+
+form {
+    min-height: 100vh;
+}
+
+.conic {
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    background-color: gray;
+    border-radius: 50%;
+}
