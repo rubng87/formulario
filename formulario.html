@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="myForm">
         <form action="#">
@@ -25,6 +27,17 @@
             </fieldset>
             <fieldset>
                 <legend>Otros</legend>
+                <label for="numero">Numero</label>
+                <input type="number" name="numero" id="numero" min="10" max="15" />
+                <br><br>
+                <label for="fecha">Fecha</label>
+                <input type="date" name="fecha" id="fecha" min="2024-03-01" max="2024-04-05" onchange="obtenerFecha()">
+                <br><br>
+                <p class="mayor"></p>
+                <br><br>
+
+
+
                 <label for="password">Contraseña : </label>
                 <input type="password" name="password" id="password" minlength="2" maxlength="10">
                 <br><br>
@@ -47,7 +60,7 @@
                 <br>
                 <button type="button" onclick="degradadoConico()">Cambiar fondo por degradado</button>
             </fieldset>
-<br><br>
+            <br><br>
 
             <div>
                 <button type="submit">Enviar</button>
@@ -57,4 +70,5 @@
 
     <script src="js/formulario.js"></script>
 </body>
+
 </html>

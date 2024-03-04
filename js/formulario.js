@@ -23,3 +23,13 @@ function degradadoConico() {
 
     
 }
+
+function obtenerFeha () {
+    let fecha = document.getElementById("fecha").value
+}
+
+
+
+function  obtenerFecha2 () {
+    let mayor = document.getElementById ("mayor").value
+}
