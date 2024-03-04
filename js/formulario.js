@@ -27,17 +27,35 @@ function degradadoConico() {
 function obtenerFecha () {
     let nacimiento = document.getElementById("fecha").value
 
-let hoy = "204-03-03";
+// let hoy = "2024-03-03";
 
  nacimiento = nacimiento.split("-") // ["2006", "3", "4"]
 
- if( nacimiento[0] > (2024-18) && (nacimiento [1] >= 3) && (nacimiento[2]) < 4) {
-    console.log("Eres menor de edad");
- } else {
-    console.log("Eres mayor de edad");
- }
+    let hoy = new Date()
+    //getDay() de 0 al 6
+    let hoyDia = hoy.getDate()
+    let hoyMes = hoy.getMonth()+1
+    let hoyAny = hoy.getFullYear()
+    console.log(hoyAny);
 
-// console.log(nacimiento)
+
+
+
+
+ //  if( (nacimiento[0] >= (2024-18)) && (nacimiento[1] >= 3) && (nacimiento[2] < 4)) {
+//     console.log("Eres menor de edad");
+//  } else {
+//     console.log("Eres mayor de edad");
+//  }
+
+// if((nacimiento[0] > (2024-18)) || (nacimiento[0] == (2024-18) || )) {
+//     console.log("Eres menor de edad");
+// } else {
+//     console.log("Eres maor de edad");
+// }
+
+
+ // console.log(nacimiento)
 
 
 
