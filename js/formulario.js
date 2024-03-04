@@ -24,12 +24,36 @@ function degradadoConico() {
     
 }
 
-function obtenerFeha () {
-    let fecha = document.getElementById("fecha").value
+function obtenerFecha () {
+    let nacimiento = document.getElementById("fecha").value
+
+let hoy = "204-03-03";
+
+ nacimiento = nacimiento.split("-") // ["2006", "3", "4"]
+
+ if( nacimiento[0] > (2024-18) && (nacimiento [1] >= 3) && (nacimiento[2]) < 4) {
+    console.log("Eres menor de edad");
+ } else {
+    console.log("Eres mayor de edad");
+ }
+
+// console.log(nacimiento)
+
+
+
+
+
+
+
+
+
+
+
 }
+// let fecha = document.getElementById("fecha").value
+// console.log(fecha);
 
 
-
-function  obtenerFecha2 () {
-    let mayor = document.getElementById ("mayor").value
-}
+// function  obtenerFecha2 () {
+//     let mayor = document.getElementById ("mayor")
+// }
