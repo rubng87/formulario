@@ -24,55 +24,73 @@ function degradadoConico() {
     
 }
 
-function obtenerFecha () {
+function obtenerFechaDate () {
+    //Obtener el valor del input tip date
     let nacimiento = document.getElementById("fecha").value
+    //Convertir el valor en un array 
+    nacimiento = nacimiento.split("-") // ["2006", "3", "4"]
 
-// let hoy = "2024-03-03";
-
- nacimiento = nacimiento.split("-") // ["2006", "3", "4"]
-
+    //Obtener la fecha actual
     let hoy = new Date()
-
+    //De la fecha actual extraemos dia, mes y año
     //getDay() dia de la semana 0 al 6
     let hoyDia = hoy.getDate() //dia del mes (1/31)
     let hoyMes = hoy.getMonth()+1
-    let hoyAny = hoy.getFullYear()
-    console.log(hoyAny);
+    let hoyAnyo = hoy.getFullYear() // esto es un Number
 
+    let nacimientoDia = Number (nacimiento[2])
+    let naciminetoMes = Number (nacimiento[1])
+    let nacimientoAnyo = Number (nacimiento[0]) // Ahora también es un Number
 
+    let edad = hoyAnyo - nacimientoAnyo
 
+    if (hoyMes < naciminetoMes) {
+        edad--
+    } else if ((hoyMes === naciminetoMes)) {
+        if (hoyDia < nacimientoDia) {
+            edad--
+        }
+    }
+    //console.log(`Tienes ${edad} años`);
 
+    
+    let parrafoEdad = document.getElementById("mayorEdad")
+    parrafoEdad.style.fontWeight = "bold"
+    if (edad < 18) {
+    parrafoEdad.innerText = "Ees menor de edad"
+    parrafoEdad.style.color = "red"
+    
+    } else {
+    parrafoEdad.innerText = "Ees mayor de edad"
+    parrafoEdad.style.color = "green"
 
- //  if( (nacimiento[0] >= (2024-18)) && (nacimiento[1] >= 3) && (nacimiento[2] < 4)) {
-//     console.log("Eres menor de edad");
-//  } else {
-//     console.log("Eres mayor de edad");
-//  }
-
-// if((nacimiento[0] > (2024-18)) || (nacimiento[0] == (2024-18) || )) {
-//     console.log("Eres menor de edad");
-// } else {
-//     console.log("Eres maor de edad");
-// }
-
-
- // console.log(nacimiento)
-
-
-
-
-
-
-
-
-
-
+    }
 
 }
-// let fecha = document.getElementById("fecha").value
-// console.log(fecha);
+
+function obtenerInformacionSelectSimple() {
+    let datoSelect = document.getElementById ("cars").value
+    console.log("Has elegido:", datoSelect);
+}
+    
+function obtenerInformacionSelectMultiple() {
+
+    let selectMultiple = document.getElementById("cars2").options
+    console.log(selectMultiple);
+
+    let arraySeleccionados = []
+    for (let i = 0; i < selectMultiple.length; i++) {
+        console.log(selectMultiple[i]);
+        if(selectMultiple[i].selected) {
+            arraySeleccionados.push(selectMultiple[i].value)
+        }
+    }
+}
+
+console.log("Tus marcas preferidas son:", arraySeleccionados);
 
 
-// function  obtenerFecha2 () {
-//     let mayor = document.getElementById ("mayor")
-// }
+
+
+
+ 
